@@ -6,7 +6,8 @@
 namespace esphome {
 namespace st7123 {
 
-static const char *TAG = "st7123";
+class ST7123Display : public display::DisplayBuffer, public Component {
+
 
 void ST7123Display::setup() {
   ESP_LOGI(TAG, "ST7123 setup start");

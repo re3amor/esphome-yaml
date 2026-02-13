@@ -1,13 +1,9 @@
 esphome:
-  name: timercamera-x
-  friendly_name: M5Stack TimerCamera-X
-  on_boot: 
-    then:
-      # read the RTC time once when the system boots
-      bm8563.read_time:
+  name: timercamera-f
+  friendly_name: M5Stack TimerCamera-F
 
 esp32:
-  board: esp32dev
+  variant: esp32
   framework:
     type: esp-idf
 
@@ -17,11 +13,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "BUEzgskL8daDJ5rLD90Chq2M43jC0haA/vVxcULQAls="
+    key: "RyCv6a2fj69bP+gBTnBvLXZHdMoCqdXYMzVjnOBemsY=" # example key, you are supposed to generate a new one
 
 ota:
   - platform: esphome
-    password: "944c4bd534590fed3fba3aed66807f3c"
+    password: "e56f53d257507a81e08d2a47ae778fb2" # example passwd, you are supposed to generate a new one
 
 wifi:
   ssid: !secret wifi_ssid
@@ -29,10 +25,11 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Timercamera-X Fallback Hotspot"
-    password: "MMqixsgBKG0K"
+    ssid: "Timercamera-F Fallback Hotspot"
+    password: "0yoh5kis0Q51"
 
 captive_portal:
+  
 
 psram:
   mode: quad

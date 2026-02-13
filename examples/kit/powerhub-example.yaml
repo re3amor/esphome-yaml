@@ -8,7 +8,7 @@ esphome:
       powerhub.read_time:
 
 esp32:
-  board: esp32-s3-devkitc-1
+  variant: esp32s3
   flash_size: 16MB
   framework:
     type: esp-idf
@@ -31,13 +31,12 @@ wifi:
 
 api:
   encryption:
-    # Replace the key by your API key
-    key: "STm5aLUIckeHqTZotQPVzgiA4Vz8ju6ZZXux+z+3TVQ="
+    key: "STm5aLUIckeHqTZotQPVzgiA4Vz8ju6ZZXux+z+3TVQ=" # example key, you are supposed to generate a new one
 
 ota:
   - platform: esphome
     # Replace the key by your OTA key
-    password: "86211424946831287ed4bef6aa32a41b"
+    password: "86211424946831287ed4bef6aa32a41b" # example passwd, you are supposed to generate a new one
 
 i2c:
   sda: GPIO45

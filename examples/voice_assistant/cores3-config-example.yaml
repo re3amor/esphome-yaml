@@ -3,7 +3,7 @@ esphome:
   friendly_name: M5Stack CoreS3 Voice Assistant
 
 esp32:
-  board: esp32-s3-devkitc-1
+  variant: esp32s3
   framework:
     type: esp-idf
 
@@ -13,7 +13,7 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: ""
+    key: "BUEzgskL8daDJ5rLD90Chq2M43jC0haA/vVxcULQAls="  # example key, you are supposed to generate a new one
 
 ota:
   - platform: esphome
@@ -30,7 +30,6 @@ wifi:
 
 captive_portal:
 
-
 packages:
-  - !include common/cores3-satellite-base.yaml
+  - !include ../../common/cores3-satellite-base.yaml
     
